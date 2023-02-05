@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arcana/auth": "^1.0.0",
+    "@arcana/auth-react": "^0.0.2",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
