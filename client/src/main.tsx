@@ -7,7 +7,9 @@ import { AuthProvider } from "@arcana/auth";
 import { ProvideAuth } from "@arcana/auth-react";
 const APP_ID = import.meta.env.VITE_ARCANA_APP_ID;
 
-const provider = new AuthProvider(`${APP_ID}`);
+const provider = new AuthProvider(`${APP_ID}`, {
+  network: "testnet",
+});
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
