@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Table from "react-bootstrap/Table";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
 class TurretGame extends React.Component {
@@ -602,7 +604,7 @@ class TurretGame extends React.Component {
     let subTitleText =
       this.state.showTryAgain === false
         ? ["shoot the never", "ending zombies"]
-        : ["these zombies has", "eaten your brain"];
+        : ["the zombies has", "over-run your base"];
     let startText =
       this.state.showTryAgain === false
         ? [
@@ -628,17 +630,38 @@ class TurretGame extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="screen">
-          <div className="debug">{this.state.debugText}</div>
-          {this.renderZombie()}
-          {this.renderFire()}
-          {this.renderTurret()}
-          {this.renderLife()}
-          {this.renderScore()}
-          {this.renderTitle()}
+      // <div className="d-flex justify-content-center align-items-center flex-column w-20">
+      //   <div className="screen">
+      //     <div className="debug">{this.state.debugText}</div>
+      //     {this.renderZombie()}
+      //     {this.renderFire()}
+      //     {this.renderTurret()}
+      //     {this.renderLife()}
+      //     {this.renderScore()}
+      //     {this.renderTitle()}
+      //   </div>
+      // </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div className="screen">
+              <div className="debug">{this.state.debugText}</div>
+              {this.renderZombie()}
+              {this.renderFire()}
+              {this.renderTurret()}
+              {this.renderLife()}
+              {this.renderScore()}
+              {this.renderTitle()}
+            </div>
+          </div>
+          <div className="col">
+            <h6>Notifications</h6>
+            <ol className="list-group list-group-numbered">
+              <li className="list-group-item">A notification</li>
+            </ol>
+          </div>
         </div>
-        <div className="">Hello</div>
       </div>
     );
   }

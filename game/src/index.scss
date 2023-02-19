@@ -1005,3 +1005,13 @@ html {
 }
 
 // Non game elements
+
+.centeredZone {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group {
+  font-size: 0.4rem !important;
+  line-height: 5px;
+}
