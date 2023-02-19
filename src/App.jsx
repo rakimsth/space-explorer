@@ -33,7 +33,11 @@ const App = () => {
             ></Route>
             <Route
               path="/gameboardhard"
-              element={<GameBoard speed={55} level={"hard"} />}
+              element={
+                <ProtectedRoute auth={auth}>
+                  <GameBoard speed={55} level={"hard"} />
+                </ProtectedRoute>
+              }
             ></Route>
           </Routes>
         </BrowserRouter>
