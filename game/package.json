@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@arcana/auth": "^1.0.1",
+    "@arcana/auth-react": "^0.0.3",
     "node-sass": "^4.14.1",
     "react": "^18.2.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^18.2.0",
     "react-scripts": "3.4.1",
-    "sass-loader": "^9.0.2"
+    "sass-loader": "^9.0.2",
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

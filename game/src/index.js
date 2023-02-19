@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
+import Header from "./Header";
+import { AuthProvider } from "@arcana/auth";
+import { ProvideAuth } from "@arcana/auth-react";
+const APP_ID = process.env.REACT_APP_ARCANA_APP_ID;
+
+const provider = new AuthProvider(`${APP_ID}`, {
+  network: "testnet",
+});
 
 class TurretGame extends React.Component {
   // Declare variables and states here
@@ -629,16 +638,19 @@ class TurretGame extends React.Component {
   render() {
     return (
       <div>
-        <div className="screen">
-          <div className="debug">{this.state.debugText}</div>
-          {this.renderZombie()}
-          {this.renderFire()}
-          {this.renderTurret()}
-          {this.renderLife()}
-          {this.renderScore()}
-          {this.renderTitle()}
-        </div>
-        <div className="">Hello</div>
+        <ProvideAuth provider={provider}>
+          <Header />
+          <div className="screen">
+            <div className="debug">{this.state.debugText}</div>
+            {this.renderZombie()}
+            {this.renderFire()}
+            {this.renderTurret()}
+            {this.renderLife()}
+            {this.renderScore()}
+            {this.renderTitle()}
+          </div>
+          <div className="">Hello</div>
+        </ProvideAuth>
       </div>
     );
   }
