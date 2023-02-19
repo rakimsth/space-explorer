@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@arcana/auth": "^1.0.1",
+    "@arcana/auth-react": "0.0.3",
     "@pushprotocol/restapi": "^0.6.1",
     "bootstrap": "^5.2.3",
     "node-sass": "^4.14.1",
